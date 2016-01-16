@@ -4,8 +4,13 @@ namespace Marslender\ShortcodeCleaner;
 
 class Plugin {
 
-	public function setup() {
+	/**
+	 * @var \Marslender\ShortcodeCleaner\Cleaner
+	 */
+	public $cleaner;
 
+	public function setup() {
+		$this->cleaner = new Cleaner();
 	}
 
 }
