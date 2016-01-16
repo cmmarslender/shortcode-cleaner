@@ -1,0 +1,19 @@
+{
+    "name": "marslender/shortcode-cleaner",
+    "description": "Shortcode Cleaner for WordPress",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Chris Marslender",
+            "email": "chrismarslender@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Marslender\\ShortcodeCleaner\\": "includes/Marslender/ShortcodeCleaner"
+        }
+    },
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
