@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Marslender\\ShortcodeCleaner\\": "includes/Marslender/ShortcodeCleaner"
+            "Cmmarslender\\ShortcodeCleaner\\": "includes/Cmmarslender/ShortcodeCleaner"
         }
     },
     "require": {

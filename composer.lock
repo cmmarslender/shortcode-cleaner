@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1d58252e005b85acb96174222f67350",
-    "content-hash": "316fd3e9c76af93a006d2758baa59745",
+    "hash": "4dbd11b0dbfbb545d37901d4688d9f1c",
+    "content-hash": "b60d151a8f989eb79aeb0a5b70aae718",
     "packages": [
         {
             "name": "cmmarslender/post-iterator",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cmmarslender/post-iterator.git",
-                "reference": "dbc57cfd78ab318cd956a2d1f291de2288a903c8"
+                "reference": "87546d1b472179ade2f7a599d8251cc4a580a348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cmmarslender/post-iterator/zipball/dbc57cfd78ab318cd956a2d1f291de2288a903c8",
-                "reference": "dbc57cfd78ab318cd956a2d1f291de2288a903c8",
+                "url": "https://api.github.com/repos/cmmarslender/post-iterator/zipball/87546d1b472179ade2f7a599d8251cc4a580a348",
+                "reference": "87546d1b472179ade2f7a599d8251cc4a580a348",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             "type": "wordpress-library",
             "autoload": {
                 "psr-4": {
-                    "Marslender\\PostIterator\\": "includes/Marslender/PostIterator"
+                    "Cmmarslender\\PostIterator\\": "includes/Cmmarslender/PostIterator"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "WPDB Based Post Iterator for WordPress",
-            "time": "2016-01-17 04:51:06"
+            "time": "2016-01-17 04:53:55"
         },
         {
             "name": "composer/installers",
