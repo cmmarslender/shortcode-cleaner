@@ -30,12 +30,20 @@ class Plugin {
 	 */
 	public $cleaner;
 
+	/**
+	 * @var \Marslender\ShortcodeCleaner\Admin
+	 */
+	public $admin;
+
 	public function setup( $plugin_file ) {
 		$this->FILE = $plugin_file;
 		$this->DIR = trailingslashit( dirname( $plugin_file ) );
 		$this->capability = apply_filters( 'marslender-shortcode-cleaner-menu-capability', 'edit_others_posts' );
 
 		$this->cleaner = new Cleaner();
+
+		$this->admin = new Admin();
+		$this->admin->setup();
 	}
 
 }
