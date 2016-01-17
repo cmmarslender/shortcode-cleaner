@@ -21,7 +21,11 @@ class Cleaner {
 
 	public function remove_enclosing_shortcode( $shortcode, $content ) {
 		$pattern = sprintf( '@\[%1$s([^\]]*)\](.*)(\[/%1$s\])@i', preg_quote( $shortcode ) );
-		$content = preg_replace( $pattern, '$2', $content );
+
+		// While loop is to catch cases of the same enclosing shortcode being nested within itself
+		while( preg_match( $pattern, $content ) ) {
+			$content = preg_replace( $pattern, '$2', $content );
+		}
 
 		return $content;
 	}
