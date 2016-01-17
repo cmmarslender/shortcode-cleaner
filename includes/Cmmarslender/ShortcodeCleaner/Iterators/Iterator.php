@@ -3,6 +3,7 @@
 namespace Cmmarslender\ShortcodeCleaner\Iterators;
 
 use Cmmarslender\PostIterator\PostIterator;
+use Cmmarslender\ShortcodeCleaner as SC;
 
 class Iterator extends PostIterator {
 
@@ -19,11 +20,9 @@ class Iterator extends PostIterator {
 	}
 
 	public function process_post() {
-		$cleaner = get_plugin( 'cleaner' );
+		$cleaner = SC\get_plugin( 'cleaner' );
 
 		$this->current_post_object->post_content = $cleaner->remove_shortcode( $this->shortcode, $this->current_post_object->post_content );
-
-		$this->update_post();
 	}
 
 }
