@@ -1,0 +1,25 @@
+{
+    "curly": true,
+    "eqeqeq": false,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "boss": true,
+    "eqnull": true,
+    "unused":  true,
+    "browser": true,
+    "globals": {
+        "require": true,
+        "process": true,
+        "module": true,
+        "jQuery": false,
+        "wp": true,
+        "tinymce": false,
+        "ajaxurl": false,
+        "wpAjax": false,
+        "_": false
+    }
+}
