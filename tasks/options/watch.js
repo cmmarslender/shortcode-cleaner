@@ -12,11 +12,5 @@ module.exports = {
 		options: {
 			debounceDelay: 500
 		}
-	},
-	markup: {
-		files: ['**/*.php', '**/*.html'],
-		options: {
-			debounceDelay: 500
-		}
 	}
 };

@@ -10,8 +10,6 @@ class Ajax {
 
 	public $nonce_action = 'clean-shortcode';
 
-	public $nonce_name = 'marslender_sc_nonce';
-
 	public function setup() {
 		add_action( 'wp_ajax_' . $this->action, [ $this, 'handle_ajax' ] );
 	}
@@ -21,16 +19,16 @@ class Ajax {
 			wp_send_json_error( array( 'message' => __( 'You do not have permission to remove shortcodes.', 'marslender-shortcode-cleaner' ) ) );
 		}
 
-		if ( ! isset( $_POST[ $this->nonce_name ] ) || ! wp_verify_nonce( $_POST[ $this->nonce_name ], $this->nonce_action ) ) {
+		if ( ! isset( $_POST[ 'nonce' ] ) || ! wp_verify_nonce( $_POST[ 'nonce' ], $this->nonce_action ) ) {
 			wp_send_json_error( array( 'message' => __( 'Unable to verify request. Please try again.', 'marslender-shortcode-cleaner' ) ) );
 		}
 
 		if ( ! isset( $_POST['shortcode'] ) || empty( $_POST['shortcode'] ) ) {
-			wp_send_json_error( __( 'You must provide a shortcode name.', 'marslender-shortcode-cleaner' ) );
+			wp_send_json_error( array( 'message' => __( 'You must provide a shortcode name.', 'marslender-shortcode-cleaner' ) ) );
 		}
 
 		if ( ! isset( $_POST['post_types'] ) || empty( $_POST['post_types'] ) ) {
-			wp_send_json_error( __( 'You must provide post types to remove shortcodes from.', 'marslender-shortcode-cleaner' ) );
+			wp_send_json_error( array( 'message' => __( 'You must provide post types to remove shortcodes from.', 'marslender-shortcode-cleaner' ) ) );
 		}
 
 		$shortcode = sanitize_text_field( $_POST['shortcode'] );

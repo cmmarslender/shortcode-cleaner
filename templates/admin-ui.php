@@ -1,8 +1,7 @@
 <div class="wrap">
 	<h1>Shortcode Cleaner</h1>
 
-	<form action="" method="POST">
-		<?php wp_nonce_field( $nonce_action, $nonce_name ); ?>
+	<form method="POST" id="shortcode-cleaner-form">
 		<h3><?php esc_html_e( 'What shortcode would you like to remove from the selected post types?', 'marslender-shortcode-cleaner' ); ?></h3>
 		<p>
 			<label for="shortcode"><?php esc_html_e( 'Shortcode', 'marslender-shortcode-cleaner' ); ?></label>
@@ -23,7 +22,7 @@
 		?>
 
 		<?php
-		submit_button( __( 'Clean Shortcodes', 'marslender-shortcode-cleaner' ) );
+		submit_button( __( 'Clean Shortcodes', 'marslender-shortcode-cleaner' ), 'primary', 'submit', true, [ 'id' => 'shortcode-submit' ] );
 		?>
 	</form>
 </div>

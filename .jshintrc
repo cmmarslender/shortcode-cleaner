@@ -20,6 +20,7 @@
         "tinymce": false,
         "ajaxurl": false,
         "wpAjax": false,
-        "_": false
+        "_": false,
+        "ShortcodeCleaner": true
     }
 }
