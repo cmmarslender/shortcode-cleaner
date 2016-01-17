@@ -52,4 +52,40 @@ class CleanerTest extends WP_UnitTestCase {
 		);
 	}
 
+	function test_nested_same_shortcode() {
+		$before = 'Content with nested [shortcode]Inside content[shortcode]something here[/shortcode]more content[/shortcode]';
+		$after = 'Content with nested Inside contentsomething heremore content';
+
+		$cleaner = SC\get_plugin( 'cleaner' );
+
+		$this->assertEquals(
+			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$after
+		);
+	}
+
+	function test_nested_different_shortcode() {
+		$before = 'Content with nested [shortcode]Inside content[bold]bold text[/bold][/shortcode]';
+		$after = 'Content with nested Inside content[bold]bold text[/bold]';
+
+		$cleaner = SC\get_plugin( 'cleaner' );
+
+		$this->assertEquals(
+			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$after
+		);
+	}
+
+	function test_square_brackets_in_enclosing_shortcode() {
+		$before = 'Content with nested [shortcode]Inside content[bold]bold text[/bold] and a random square bracket[/shortcode]';
+		$after = 'Content with nested Inside content[bold]bold text[/bold] and a random square bracket';
+
+		$cleaner = SC\get_plugin( 'cleaner' );
+
+		$this->assertEquals(
+			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$after
+		);
+	}
+
 }
