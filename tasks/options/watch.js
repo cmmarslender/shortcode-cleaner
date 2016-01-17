@@ -1,10 +1,4 @@
 module.exports = {
-	livereload: {
-		files  : ['assets/css/**/*.css'],
-		options: {
-			livereload: true
-		}
-	},
 	sass: {
 		files: ['assets/css/scss/**/*.scss'],
 		tasks: ['sass', 'postcss', 'cssmin'],
