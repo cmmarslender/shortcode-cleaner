@@ -2,29 +2,27 @@
 
 namespace Marslender\ShortcodeCleaner;
 
-class CleanerTest extends \WP_UnitTestCase {
+class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 
 	function test_self_closing_shortcode() {
 		$before = 'This is some content with a [shortcode] inside of it';
-		$after = 'This is some content with a  inside of it';
 
 		$cleaner = \Marslender\ShortcodeCleaner\get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
+			$before
 		);
 	}
 
 	function test_self_closing_shortcode_with_attributes() {
 		$before = 'This is some content with a [shortcode position="testing" singlequote=\'\'] inside of it that also has attributes on the tag';
-		$after = 'This is some content with a  inside of it that also has attributes on the tag';
 
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
+			$before
 		);
 	}
 
@@ -35,7 +33,7 @@ class CleanerTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
 			$after
 		);
 	}
@@ -47,7 +45,7 @@ class CleanerTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
 			$after
 		);
 	}
@@ -59,7 +57,7 @@ class CleanerTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
 			$after
 		);
 	}
@@ -71,7 +69,7 @@ class CleanerTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
 			$after
 		);
 	}
@@ -83,7 +81,19 @@ class CleanerTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
+			$after
+		);
+	}
+
+	function test_mix_of_self_closing_and_enclosing_shortcodes() {
+		$before = 'Content with nested [shortcode]Inside [gallery] content[bold]bold text[/bold] and a random square bracket[/shortcode]';
+		$after = 'Content with nested Inside [gallery] content[bold]bold text[/bold] and a random square bracket';
+
+		$cleaner = get_plugin( 'cleaner' );
+
+		$this->assertEquals(
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
 			$after
 		);
 	}
