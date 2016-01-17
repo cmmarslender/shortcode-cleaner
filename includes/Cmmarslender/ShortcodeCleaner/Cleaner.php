@@ -1,6 +1,6 @@
 <?php
 
-namespace Marslender\ShortcodeCleaner;
+namespace Cmmarslender\ShortcodeCleaner;
 
 class Cleaner {
 

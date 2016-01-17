@@ -1,13 +1,13 @@
 <?php
 
-namespace Marslender\ShortcodeCleaner;
+namespace Cmmarslender\ShortcodeCleaner;
 
 class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 
 	function test_self_closing_shortcode() {
 		$before = 'This is some content with a [shortcode] inside of it';
 
-		$cleaner = \Marslender\ShortcodeCleaner\get_plugin( 'cleaner' );
+		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
 			$before,

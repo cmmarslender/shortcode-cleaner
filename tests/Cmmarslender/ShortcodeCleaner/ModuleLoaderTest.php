@@ -1,13 +1,13 @@
 <?php
 
-namespace Marslender\ShortcodeCleaner;
+namespace Cmmarslender\ShortcodeCleaner;
 
 class ModuleLoaderTest extends \WP_UnitTestCase {
 
 	function test_main_plugin_is_returned() {
 		$returned = get_plugin();
 
-		$this->assertInstanceOf( 'Marslender\\ShortcodeCleaner\\Plugin', $returned );
+		$this->assertInstanceOf( 'Cmmarslender\\ShortcodeCleaner\\Plugin', $returned );
 	}
 
 	function test_is_singleton_instance() {

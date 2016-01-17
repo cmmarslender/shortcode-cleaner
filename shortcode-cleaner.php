@@ -7,7 +7,7 @@
  * Author URI: http://chrismarslender.com/
  */
 
-namespace Marslender\ShortcodeCleaner;
+namespace Cmmarslender\ShortcodeCleaner;
 
 // Include the autoloader, or fail
 if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
@@ -28,8 +28,8 @@ function get_plugin( $plugin_part = null ) {
 	static $plugin;
 
 	if ( empty( $plugin ) ) {
-		$plugin = new \Marslender\ShortcodeCleaner\Plugin();
-		$plugin->setup();
+		$plugin = new Plugin();
+		$plugin->setup( __FILE__ );
 	}
 
 	if ( ! is_null( $plugin_part ) ) {

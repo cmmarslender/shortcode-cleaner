@@ -1,6 +1,6 @@
 <?php
 
-namespace Marslender\ShortcodeCleaner;
+namespace Cmmarslender\ShortcodeCleaner;
 
 class RemoveShortcodeTest extends \WP_UnitTestCase {
 
@@ -8,7 +8,7 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$before = 'This is some content with a [shortcode] inside of it';
 		$after = 'This is some content with a  inside of it';
 
-		$cleaner = \Marslender\ShortcodeCleaner\get_plugin( 'cleaner' );
+		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
 			$after,
