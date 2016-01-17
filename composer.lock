@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cmmarslender/post-iterator.git",
-                "reference": "8eb103f661a797afac0362122ffc1d8a565e58da"
+                "reference": "4d5189b76fdc3f83761351a0a76c024ae2fd84a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cmmarslender/post-iterator/zipball/8eb103f661a797afac0362122ffc1d8a565e58da",
-                "reference": "8eb103f661a797afac0362122ffc1d8a565e58da",
+                "url": "https://api.github.com/repos/cmmarslender/post-iterator/zipball/4d5189b76fdc3f83761351a0a76c024ae2fd84a3",
+                "reference": "4d5189b76fdc3f83761351a0a76c024ae2fd84a3",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "WPDB Based Post Iterator for WordPress",
-            "time": "2016-01-17 05:09:09"
+            "time": "2016-01-17 06:41:07"
         },
         {
             "name": "composer/installers",
