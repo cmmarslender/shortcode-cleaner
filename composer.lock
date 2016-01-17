@@ -4,9 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d73878a913cfd1c63b4d0d8faf0e70a8",
-    "content-hash": "5813eefab62fa1bed2070ec4e8420aba",
+    "hash": "b1d58252e005b85acb96174222f67350",
+    "content-hash": "316fd3e9c76af93a006d2758baa59745",
     "packages": [
+        {
+            "name": "cmmarslender/post-iterator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmmarslender/post-iterator.git",
+                "reference": "39503a917b66593c5fe579a67125875652e94a77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmmarslender/post-iterator/zipball/39503a917b66593c5fe579a67125875652e94a77",
+                "reference": "39503a917b66593c5fe579a67125875652e94a77",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Marslender\\PostIterator\\": "includes/Marslender/PostIterator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Marslender",
+                    "email": "chrismarslender@gmail.com"
+                }
+            ],
+            "description": "WPDB Based Post Iterator for WordPress",
+            "time": "2016-01-17 04:48:42"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.22",
@@ -109,7 +145,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cmmarslender/post-iterator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
