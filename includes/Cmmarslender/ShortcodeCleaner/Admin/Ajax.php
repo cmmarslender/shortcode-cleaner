@@ -11,7 +11,7 @@ class Ajax {
 	public $nonce_action = 'clean-shortcode';
 
 	public function setup() {
-		add_action( 'wp_ajax_' . $this->action, [ $this, 'handle_ajax' ] );
+		add_action( 'wp_ajax_' . $this->action, array( $this, 'handle_ajax' ) );
 	}
 
 	public function handle_ajax() {
@@ -36,7 +36,7 @@ class Ajax {
 
 		// @todo would be nice to integrate multiple post type support to post iterator
 		foreach( $post_types as $post_type ) {
-			$iterator = new SC\Iterators\Iterator( $shortcode, [ 'post_type' => $post_type ] );
+			$iterator = new SC\Iterators\Iterator( $shortcode, array( 'post_type' => $post_type ) );
 			$iterator->go();
 		}
 

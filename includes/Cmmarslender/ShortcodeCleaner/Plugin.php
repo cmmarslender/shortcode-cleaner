@@ -40,12 +40,12 @@ class Plugin {
 	public $capability;
 
 	/**
-	 * @var \Marslender\ShortcodeCleaner\Cleaner
+	 * @var \Cmmarslender\ShortcodeCleaner\Cleaner
 	 */
 	public $cleaner;
 
 	/**
-	 * @var \Marslender\ShortcodeCleaner\Admin
+	 * @var \Cmmarslender\ShortcodeCleaner\Admin
 	 */
 	public $admin;
 
@@ -56,7 +56,7 @@ class Plugin {
 		$this->version = "1.0.0";
 		$this->capability = apply_filters( 'marslender-shortcode-cleaner-menu-capability', 'edit_others_posts' );
 
-		add_action( 'admin_enqueue_scripts', [ $this, 'register_scripts' ], 5 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_scripts' ), 5 );
 
 		$this->cleaner = new Cleaner();
 
@@ -67,7 +67,7 @@ class Plugin {
 	public function register_scripts() {
 		$extension = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.js' : '.min.js';
 
-		wp_register_script( 'shortcode-cleaner', $this->URL . 'assets/js/main' . $extension, [ 'jquery' ], $this->version, true );
+		wp_register_script( 'shortcode-cleaner', $this->URL . 'assets/js/main' . $extension, array( 'jquery' ), $this->version, true );
 	}
 
 }

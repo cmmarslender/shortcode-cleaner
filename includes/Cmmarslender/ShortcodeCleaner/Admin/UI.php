@@ -9,13 +9,13 @@ class UI {
 	const MENU_SLUG = 'shortcode-cleaner';
 
 	public function setup() {
-		add_action( 'admin_menu', [ $this, 'register_menu_item'] );
-		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'admin_menu', array( $this, 'register_menu_item') );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	public function register_menu_item() {
 		$capability = SC\get_plugin( 'capability' );
-		add_management_page( __( 'Shortcode Cleaner', 'marslender-shortcode-cleaner' ), __( 'Shortcode Cleaner', 'marslender-shortcode-cleaner' ), $capability, self::MENU_SLUG, [ $this, 'render' ] );
+		add_management_page( __( 'Shortcode Cleaner', 'marslender-shortcode-cleaner' ), __( 'Shortcode Cleaner', 'marslender-shortcode-cleaner' ), $capability, self::MENU_SLUG, array( $this, 'render' ) );
 	}
 
 	public function enqueue_scripts( $page ) {
@@ -24,10 +24,10 @@ class UI {
 		}
 
 		wp_enqueue_script( 'shortcode-cleaner' );
-		wp_localize_script( 'shortcode-cleaner', 'ShortcodeCleaner', [
+		wp_localize_script( 'shortcode-cleaner', 'ShortcodeCleaner', array(
 			'nonce' => wp_create_nonce( SC\get_plugin( 'admin.ajax.nonce_action' ) ),
 			'action' => SC\get_plugin( 'admin.ajax.action' )
-		] );
+		) );
 	}
 
 	public function render() {
