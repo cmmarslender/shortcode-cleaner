@@ -11,8 +11,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = \Marslender\ShortcodeCleaner\get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -23,8 +23,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -35,8 +35,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -47,8 +47,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -59,8 +59,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -71,8 +71,8 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -82,9 +82,10 @@ class RemoveShortcodeTest extends \WP_UnitTestCase {
 
 		$cleaner = get_plugin( 'cleaner' );
 
+		// @todo do we need to flip these so expected/actual line up?
 		$this->assertEquals(
-			$cleaner->remove_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_shortcode( 'shortcode', $before )
 		);
 	}
 

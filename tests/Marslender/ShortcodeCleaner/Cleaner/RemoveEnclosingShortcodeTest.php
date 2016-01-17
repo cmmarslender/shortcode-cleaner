@@ -10,8 +10,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = \Marslender\ShortcodeCleaner\get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$before
+			$before,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -21,8 +21,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$before
+			$before,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -33,8 +33,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -45,8 +45,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -57,8 +57,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -69,8 +69,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -81,8 +81,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
@@ -93,8 +93,8 @@ class RemoveEnclosingShortcodeTest extends \WP_UnitTestCase {
 		$cleaner = get_plugin( 'cleaner' );
 
 		$this->assertEquals(
-			$cleaner->remove_enclosing_shortcode( 'shortcode', $before ),
-			$after
+			$after,
+			$cleaner->remove_enclosing_shortcode( 'shortcode', $before )
 		);
 	}
 
