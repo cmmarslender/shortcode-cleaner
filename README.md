@@ -11,7 +11,7 @@ the leftover shortcodes from your content across your whole site.
 * PHP 5.3+
 
 ## Notes
-The plugin is intended to remove all instances of a given shortcode, whether self-closing ([shortcode]) or enclosing
-([shortcode]Content inside enclosing shortcodes[/shortcode]). If there is a demand for it, support for only one type
+The plugin is intended to remove all instances of a given shortcode, whether self-closing ```[shortcode]``` or enclosing
+```[shortcode]Content inside enclosing shortcodes[/shortcode]```. If there is a demand for it, support for only one type
 of shortcode could be added, but currently, trying to use the functions in this manner will *NOT* work as expected,
 specifically if trying to only remove self closing shortcodes.
